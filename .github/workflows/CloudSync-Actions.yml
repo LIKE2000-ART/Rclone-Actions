@@ -48,7 +48,7 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync -v OneDrive: GoogleDrive: --transfers 10 --checkers 10 -v --stats-one-line --stats=5s --drive-chunk-size 32M --drive-acknowledge-abuse --drive-keep-revision-forever --delete-empty-src-dirs --ignore-existing --buffer-size 96M --fast-list --local-no-check-updated 
+          ./rclone sync -v OneDrive: GoogleDrive: --transfers 10 --checkers 10 -v --stats-one-line --stats=5s --drive-chunk-size 32M --drive-acknowledge-abuse --drive-keep-revision-forever --create-empty-src-dirs --ignore-existing --buffer-size 96M --fast-list --local-no-check-updated 
           echo "Onedrive文件已备份到Google盘"
 
       # - name: Delete workflow runs
